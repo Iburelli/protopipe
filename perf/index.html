@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>perf &mdash; protopipe 0.4.0.post2.dev128+g9149e12 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="angular_resolution" href="../api/protopipe.perf.angular_resolution.html" />
+    <link rel="prev" title="TrainModel" href="../api/protopipe.mva.TrainModel.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> protopipe
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0.post2.dev128+g9149e12
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Workflow and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AUTHORS.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CHANGELOG.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Structure</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../pipeline/index.html">pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mva/index.html">mva</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">perf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reference-api">Reference/API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-protopipe.perf">protopipe.perf Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/protopipe.perf.angular_resolution.html">angular_resolution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/protopipe.perf.energy_bias_resolution.html">energy_bias_resolution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/protopipe.perf.load_obj.html">load_obj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/protopipe.perf.percentiles.html">percentiles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/protopipe.perf.plot_hist.html">plot_hist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/protopipe.perf.read_DL2_pyirf.html">read_DL2_pyirf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/protopipe.perf.save_obj.html">save_obj</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#variables">Variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/protopipe.perf.norm.html">norm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scripts/index.html">scripts</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">protopipe</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>perf</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/perf/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="perf">
+<span id="id1"></span><h1>perf<a class="headerlink" href="#perf" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The DL2-to-DL3 step of the <em>protopipe</em> pipeline is now based on the
+<a class="reference external" href="https://cta-observatory.github.io/pyirf/">pyirf</a> library.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">protopipe.perf</span></code> module contains utility tools used to interface with this
+library, mainly to translate the DL2 data in the internal nomenclature used by
+<em>pyirf</em> to produce the DL3 file.</p>
+<p>In general this step takes care of</p>
+<ul class="simple">
+<li><p>handling the determination of the best-cutoffs to separate gamma and
+the background (protons + electrons),</p></li>
+<li><p>estimating the sensitivity from the optimized cuts,</p></li>
+<li><p>producing the instrument response functions (IRFs).</p></li>
+</ul>
+<p>Provided that a performance script makes used of
+<code class="docutils literal notranslate"><span class="pre">protopipe.perf.utils.read_DL2_pyirf</span></code>, <em>protopipe</em> supports the addition and
+testing of multiple scripts based on pyirf.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some functions are discontinued or will be with the next release
+and they will be removed.</p>
+</div>
+<p>The current approach is based on the EventDisplay historical pipeline for which
+the following main points apply,</p>
+<ul class="simple">
+<li><p>minimum telescope multiplicity cut set to 3 (for 30’ and 100’’ exposures)
+and 4 (for 5h and 50h exposures),</p></li>
+<li><p>maximum signal efficiency set to 80%,</p></li>
+<li><p>optimisation cuts are performed following these steps,
+- applying a global cut of 40% signal efficiency,
+- energy-bin-wise 68% containment angular cuts optimization
+- energy-bin-wise optimisation of gamma/hadron separation cut for best sensitivity</p></li>
+</ul>
+<p>For more details on the specific API and benchmarks, please check <em>pyirf</em>’s documentation.</p>
+</div>
+<div class="section" id="reference-api">
+<h2>Reference/API<a class="headerlink" href="#reference-api" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-protopipe.perf">
+<span id="protopipe-perf-package"></span><h2>protopipe.perf Package<a class="headerlink" href="#module-protopipe.perf" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/protopipe.perf.angular_resolution.html#protopipe.perf.angular_resolution" title="protopipe.perf.angular_resolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">angular_resolution</span></code></a>(events, energy_bins[, …])</p></td>
+<td><p>Calculate the angular resolution.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/protopipe.perf.energy_bias_resolution.html#protopipe.perf.energy_bias_resolution" title="protopipe.perf.energy_bias_resolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">energy_bias_resolution</span></code></a>(events, energy_bins)</p></td>
+<td><p>Calculate bias and energy resolution.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/protopipe.perf.load_obj.html#protopipe.perf.load_obj" title="protopipe.perf.load_obj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_obj</span></code></a>(name)</p></td>
+<td><p>Load object in binary</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/protopipe.perf.percentiles.html#protopipe.perf.percentiles" title="protopipe.perf.percentiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">percentiles</span></code></a>(values, bin_values, bin_edges, …)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/protopipe.perf.plot_hist.html#protopipe.perf.plot_hist" title="protopipe.perf.plot_hist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_hist</span></code></a>(ax, data, edges[, norm, yerr, …])</p></td>
+<td><p>Utility function to plot histogram</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/protopipe.perf.read_DL2_pyirf.html#protopipe.perf.read_DL2_pyirf" title="protopipe.perf.read_DL2_pyirf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_DL2_pyirf</span></code></a>(infile, run_header)</p></td>
+<td><p>Read a DL2 HDF5 protopipe file and adapt them to pyirf format.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/protopipe.perf.save_obj.html#protopipe.perf.save_obj" title="protopipe.perf.save_obj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_obj</span></code></a>(obj, name)</p></td>
+<td><p>Save object in binary</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/protopipe.perf.norm.html#protopipe.perf.norm" title="protopipe.perf.norm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norm</span></code></a></p></td>
+<td><p>A normal continuous random variable.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../api/protopipe.perf.angular_resolution.html" class="btn btn-neutral float-right" title="angular_resolution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../api/protopipe.mva.TrainModel.html" class="btn btn-neutral float-left" title="TrainModel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Michele Peresano.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
